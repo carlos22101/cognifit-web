@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aviso de Privacidad — CogniFit Escolar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --ink: #0D2137;
+  --teal: #0D9B8A;
+  --teal-light: #E4F4F2;
+  --teal-mid: #9ED4CD;
+  --sand: #FAFAF6;
+  --white: #FFFFFF;
+  --text: #18293A;
+  --muted: #5A6E7E;
+  --border: rgba(13,33,55,0.09);
+  --border-strong: rgba(13,33,55,0.15);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--sand); color: var(--text); line-height: 1.7; }
+
+nav {
+  background: var(--ink); padding: 0 2rem; height: 58px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-mark { width: 30px; height: 30px; background: var(--teal); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+.nav-name { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 15px; color: #fff; }
+.nav-back { font-size: 13px; color: rgba(255,255,255,.55); text-decoration: none; display: flex; align-items: center; gap: 5px; transition: color .2s; }
+.nav-back:hover { color: var(--teal); }
+
+.page-header {
+  background: var(--ink); color: #fff;
+  padding: 3.5rem 2rem 3rem; text-align: center;
+}
+.page-header-eyebrow {
+  display: inline-block; background: var(--teal-light); color: var(--teal);
+  font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px;
+  padding: 4px 14px; border-radius: 20px; margin-bottom: 1.25rem;
+}
+.page-header h1 {
+  font-family: 'Nunito', sans-serif; font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 900; line-height: 1.15; letter-spacing: -.4px; margin-bottom: .75rem;
+}
+.page-header-meta { font-size: 14px; color: rgba(255,255,255,.5); }
+
+.container { max-width: 780px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+
+.toc {
+  background: var(--white); border: 1px solid var(--border-strong);
+  border-radius: 16px; padding: 1.75rem 2rem; margin-bottom: 3rem;
+}
+.toc-title { font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 800; color: var(--ink); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .8px; }
+.toc-list { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+.toc-list li a {
+  font-size: 14px; color: var(--teal); text-decoration: none; font-weight: 500;
+  display: flex; align-items: center; gap: 8px; transition: color .2s;
+}
+.toc-list li a:hover { color: var(--ink); }
+.toc-num { font-weight: 700; color: var(--muted); min-width: 18px; font-size: 13px; }
+
+.section { margin-bottom: 3rem; scroll-margin-top: 1.5rem; }
+.section-title {
+  font-family: 'Nunito', sans-serif; font-size: 1.2rem; font-weight: 900;
+  color: var(--ink); padding-bottom: .6rem; margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--teal-light);
+  display: flex; align-items: center; gap: 10px;
+}
+.section-num {
+  background: var(--teal); color: #fff;
+  font-size: 11px; font-weight: 800;
+  width: 22px; height: 22px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+p { font-size: 15px; color: var(--text); line-height: 1.75; margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+.subsection-title { font-size: 14px; font-weight: 600; color: var(--ink); margin: 1.25rem 0 .6rem; }
+
+ul.items { list-style: none; display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1rem; padding-left: .5rem; }
+ul.items li {
+  font-size: 14.5px; color: var(--text); line-height: 1.65;
+  padding-left: 1.25rem; position: relative;
+}
+ul.items li::before {
+  content: ''; position: absolute; left: 0; top: .65em;
+  width: 6px; height: 6px; background: var(--teal); border-radius: 50%;
+}
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 1rem; }
+th {
+  background: var(--ink); color: #fff; text-align: left;
+  padding: 10px 14px; font-weight: 700; font-size: 13px;
+}
+th:first-child { border-radius: 8px 0 0 0; }
+th:last-child { border-radius: 0 8px 0 0; }
+td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:nth-child(even) td { background: var(--teal-light); }
+tr:last-child td { border-bottom: none; }
+
+.callout {
+  background: var(--teal-light); border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1rem 0;
+  font-size: 14.5px; line-height: 1.7;
+}
+.callout strong { color: var(--teal); }
+
+.arco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+.arco-card {
+  background: var(--white); border: 1px solid var(--border-strong);
+  border-radius: 12px; padding: 1.25rem 1rem; text-align: center;
+}
+.arco-letter { font-family: 'Nunito', sans-serif; font-size: 2rem; font-weight: 900; color: var(--teal); line-height: 1; margin-bottom: .4rem; }
+.arco-name { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: .3rem; }
+.arco-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+footer {
+  background: var(--ink); color: rgba(255,255,255,.5);
+  padding: 2.5rem 2rem; text-align: center;
+}
+.footer-name { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 15px; color: #fff; margin-bottom: .3rem; }
+.footer-sub { font-size: 13px; }
+.footer-disc { font-size: 12px; color: rgba(255,255,255,.3); margin-top: .75rem; }
+.footer-back { display: inline-block; margin-top: 1.25rem; font-size: 13px; color: var(--teal); text-decoration: none; }
+.footer-back:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">
+    <div class="nav-mark">
+      <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.134 2 2 5.134 2 9s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 2.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zm0 9.8a5.25 5.25 0 01-4.2-2.1c.021-1.4 2.8-2.17 4.2-2.17 1.393 0 4.18.77 4.2 2.17A5.25 5.25 0 019 14.3z" fill="white"/></svg>
+    </div>
+    <span class="nav-name">CogniFit Escolar</span>
+  </a>
+  <a class="nav-back" href="index.html">
+    ← Volver al inicio
+  </a>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-eyebrow">LFPDPPP · México</div>
+  <h1>Aviso de Privacidad</h1>
+  <div class="page-header-meta">Versión 1.0 &nbsp;·&nbsp; Julio de 2025 &nbsp;·&nbsp; CogniFit Escolar</div>
+</div>
+
+<div class="container">
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Contenido</div>
+    <ol class="toc-list">
+      <li><a href="#s1"><span class="toc-num">I.</span> Identidad y domicilio del Responsable</a></li>
+      <li><a href="#s2"><span class="toc-num">II.</span> Datos personales que se recaban</a></li>
+      <li><a href="#s3"><span class="toc-num">III.</span> Finalidades del tratamiento</a></li>
+      <li><a href="#s4"><span class="toc-num">IV.</span> Tratamiento de datos sensibles</a></li>
+      <li><a href="#s5"><span class="toc-num">V.</span> Transferencias de datos</a></li>
+      <li><a href="#s6"><span class="toc-num">VI.</span> Medidas de seguridad</a></li>
+      <li><a href="#s7"><span class="toc-num">VII.</span> Derechos ARCO y mecanismo de ejercicio</a></li>
+      <li><a href="#s8"><span class="toc-num">VIII.</span> Consentimiento para datos de menores</a></li>
+      <li><a href="#s9"><span class="toc-num">IX.</span> Cookies y tecnologías de seguimiento</a></li>
+      <li><a href="#s10"><span class="toc-num">X.</span> Cambios al aviso</a></li>
+      <li><a href="#s11"><span class="toc-num">XI.</span> Autoridad supervisora</a></li>
+    </ol>
+  </div>
+
+  <!-- I -->
+  <div class="section" id="s1">
+    <div class="section-title"><span class="section-num">I</span> Identidad y domicilio del Responsable</div>
+    <p>En cumplimiento con la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong> y su Reglamento, se informa que el Responsable del tratamiento de sus datos personales es:</p>
+    <table>
+      <tr><th>Campo</th><th>Información</th></tr>
+      <tr><td>Nombre / Denominación</td><td>CogniFit Escolar — Proyecto académico, Universidad Politécnica de Chiapas</td></tr>
+      <tr><td>Domicilio</td><td>Carretera Suchiapa-San Fernando Km. 1, Suchiapa, Chiapas, México, C.P. 29140</td></tr>
+      <tr><td>Correo de contacto</td><td>cognifit.escolar@upchiapas.edu.mx</td></tr>
+      <tr><td>Responsable de datos</td><td>Equipo de desarrollo — Ingeniería en Software, 9°D, generación 2025-2026</td></tr>
+    </table>
+  </div>
+
+  <!-- II -->
+  <div class="section" id="s2">
+    <div class="section-title"><span class="section-num">II</span> Datos personales que se recaban</div>
+    <p>CogniFit Escolar recaba las siguientes categorías de datos personales según el rol del usuario:</p>
+
+    <div class="subsection-title">a) Docentes (TEACHER)</div>
+    <ul class="items">
+      <li>Nombre completo y correo electrónico institucional</li>
+      <li>Contraseña (almacenada con hash; nunca en texto claro)</li>
+      <li>Acciones realizadas dentro del sistema (log de auditoría)</li>
+      <li>Respuestas al cuestionario de observación PRODISLEX</li>
+    </ul>
+
+    <div class="subsection-title">b) Alumnos — menores de edad (STUDENT)</div>
+    <ul class="items">
+      <li>Nombre completo, grado escolar y grupo</li>
+      <li>Respuestas a los módulos de evaluación (texto escrito, tiempo de respuesta)</li>
+      <li>Códigos de error detectados por el sistema (omisiones, inversiones, sustituciones, etc.)</li>
+      <li>Vector de 28 características numéricas derivado de las respuestas (sin nombre ni identificador directo del alumno)</li>
+      <li>Nivel de riesgo estimado, subtipo y severidad generados por el modelo de ML</li>
+      <li>Historial de sesiones de intervención y precisión en ejercicios</li>
+    </ul>
+
+    <div class="subsection-title">c) Tutores / Padres de familia (PARENT)</div>
+    <ul class="items">
+      <li>Nombre y correo electrónico de contacto</li>
+      <li>Registro del consentimiento informado otorgado para el tratamiento de datos de su menor</li>
+    </ul>
+
+    <div class="subsection-title">d) Especialistas (SPECIALIST)</div>
+    <ul class="items">
+      <li>Nombre completo y correo electrónico</li>
+      <li>Etiquetas clínicas de revisión asociadas a diagnósticos anónimos</li>
+    </ul>
+
+    <div class="subsection-title">e) Administradores (ADMIN)</div>
+    <ul class="items">
+      <li>Nombre completo, correo electrónico institucional y registro de acciones administrativas</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Nota sobre menores de edad:</strong> Los datos de los alumnos constituyen datos personales de menores de edad y, por tanto, su tratamiento se ampara en el consentimiento expreso del tutor o padre de familia, conforme al artículo 9 de la LFPDPPP.
+    </div>
+  </div>
+
+  <!-- III -->
+  <div class="section" id="s3">
+    <div class="section-title"><span class="section-num">III</span> Finalidades del tratamiento</div>
+
+    <div class="subsection-title">Finalidades primarias (necesarias para el servicio)</div>
+    <ul class="items">
+      <li>Detección temprana de indicadores de riesgo de dislexia mediante evaluaciones estandarizadas (batería TEDE / PRODISLEX).</li>
+      <li>Generación automatizada de un diagnóstico de riesgo orientativo —no clínico— basado en un modelo de aprendizaje automático.</li>
+      <li>Elaboración y seguimiento de rutas de intervención adaptativa personalizadas.</li>
+      <li>Comunicación de resultados y alertas al docente responsable del alumno.</li>
+      <li>Generación de informes en PDF para uso pedagógico.</li>
+      <li>Gestión de cuentas de usuario, autenticación y control de acceso por roles.</li>
+    </ul>
+
+    <div class="subsection-title">Finalidades secundarias (requieren consentimiento adicional)</div>
+    <ul class="items">
+      <li>Reentrenamiento y mejora del modelo de ML utilizando vectores de características anónimos revisados y etiquetados por especialistas.</li>
+      <li>Generación de estadísticas e investigación académica agregada sobre prevalencia de indicadores de dislexia en contextos educativos de Chiapas. Los resultados se publican de forma anonimizada.</li>
+    </ul>
+    <p>Si el titular o su tutor no desea que sus datos sean utilizados para estas finalidades secundarias, puede manifestarlo por escrito al correo indicado en la sección I. La negativa no afectará el acceso a las funciones principales de la plataforma.</p>
+  </div>
+
+  <!-- IV -->
+  <div class="section" id="s4">
+    <div class="section-title"><span class="section-num">IV</span> Tratamiento de datos sensibles</div>
+    <p>Los diagnósticos de riesgo de dislexia, subtipo y severidad son considerados <strong>datos de salud</strong> y, por ende, datos personales sensibles en los términos del artículo 3, fracción VI de la LFPDPPP. Para su tratamiento se recabará el consentimiento expreso y por escrito del tutor o padre de familia del alumno menor de edad.</p>
+    <p>El vector de 28 características numéricas utilizado para el reentrenamiento del modelo no contiene nombre, matrícula ni ningún otro identificador directo o indirecto del alumno; es procesado de forma anónima por el sistema.</p>
+  </div>
+
+  <!-- V -->
+  <div class="section" id="s5">
+    <div class="section-title"><span class="section-num">V</span> Transferencias de datos</div>
+    <p>CogniFit Escolar no realiza transferencias de datos personales a terceros con fines comerciales. Las únicas comunicaciones de datos son las siguientes:</p>
+    <table>
+      <tr><th>Destinatario</th><th>Finalidad y base legal</th></tr>
+      <tr><td><strong>Neon (Neon Inc., EE. UU.)</strong></td><td>Almacenamiento de base de datos en la nube (PostgreSQL serverless). Datos cifrados en tránsito y en reposo. Amparado en cláusulas contractuales estándar.</td></tr>
+      <tr><td><strong>Universidad Politécnica de Chiapas</strong></td><td>Supervisión académica del proyecto integrador. Acceso únicamente a resultados agregados y anonimizados.</td></tr>
+      <tr><td><strong>Especialistas clínicos vinculados al proyecto</strong></td><td>Revisión de diagnósticos automáticos para etiquetado de datos de entrenamiento. Vectores anonimizados; sin acceso al nombre del alumno.</td></tr>
+    </table>
+    <p>No se realizan transferencias internacionales de datos personales identificables fuera del marco descrito.</p>
+  </div>
+
+  <!-- VI -->
+  <div class="section" id="s6">
+    <div class="section-title"><span class="section-num">VI</span> Medidas de seguridad</div>
+    <p>CogniFit Escolar implementa las siguientes salvaguardas técnicas y organizativas:</p>
+    <ul class="items">
+      <li>Cifrado AES-256-GCM en la capa de persistencia para datos sensibles en el backend.</li>
+      <li>Transmisión de datos exclusivamente mediante HTTPS/TLS.</li>
+      <li>Autenticación basada en JWT (Bearer Token) con expiración de 30 minutos y tokens de refresco de 7 días.</li>
+      <li>Control de acceso granular por roles (ADMIN, SPECIALIST, TEACHER, PARENT, STUDENT).</li>
+      <li>Registro de auditoría (<code>audit.audit_log</code>) de todas las acciones sobre datos sensibles.</li>
+      <li>Eliminación lógica (soft delete) de perfiles de alumnos; eliminación permanente solo disponible para administradores.</li>
+      <li>FLAG_SECURE activado en la aplicación móvil para impedir capturas de pantalla no autorizadas.</li>
+      <li>Consentimientos de tutores registrados en la tabla <code>auth.guardian_consents</code> con marca de tiempo.</li>
+    </ul>
+  </div>
+
+  <!-- VII -->
+  <div class="section" id="s7">
+    <div class="section-title"><span class="section-num">VII</span> Derechos ARCO y mecanismo de ejercicio</div>
+    <p>El titular de los datos (o su tutor legal en el caso de menores) tiene derecho a:</p>
+    <div class="arco-grid">
+      <div class="arco-card">
+        <div class="arco-letter">A</div>
+        <div class="arco-name">Acceso</div>
+        <div class="arco-desc">Conocer qué datos conserva el sistema y cómo son utilizados</div>
+      </div>
+      <div class="arco-card">
+        <div class="arco-letter">R</div>
+        <div class="arco-name">Rectificación</div>
+        <div class="arco-desc">Solicitar la corrección de datos inexactos o incompletos</div>
+      </div>
+      <div class="arco-card">
+        <div class="arco-letter">C</div>
+        <div class="arco-name">Cancelación</div>
+        <div class="arco-desc">Pedir la supresión cuando los datos ya no sean necesarios</div>
+      </div>
+      <div class="arco-card">
+        <div class="arco-letter">O</div>
+        <div class="arco-name">Oposición</div>
+        <div class="arco-desc">Oponerse al tratamiento para finalidades secundarias</div>
+      </div>
+    </div>
+    <p>Para ejercer cualquiera de estos derechos, el titular deberá enviar una solicitud escrita a <strong>cognifit.escolar@upchiapas.edu.mx</strong> indicando: nombre completo del titular o del menor y su relación con él, copia de identificación oficial, descripción clara del derecho que desea ejercer, y datos de contacto para recibir la respuesta.</p>
+    <p>El Responsable atenderá la solicitud en un plazo máximo de <strong>20 días hábiles</strong> a partir de su recepción, conforme al artículo 32 de la LFPDPPP.</p>
+  </div>
+
+  <!-- VIII -->
+  <div class="section" id="s8">
+    <div class="section-title"><span class="section-num">VIII</span> Consentimiento para datos de menores</div>
+    <p>Dado que la plataforma procesa datos personales de alumnos que pueden ser menores de edad, el docente o institución escolar deberá obtener y registrar el consentimiento informado del tutor o padre de familia antes de crear el perfil del alumno en el sistema. Dicho consentimiento se almacena con marca de tiempo y no podrá revocarse de forma retroactiva sin la solicitud expresa del tutor mediante el procedimiento ARCO descrito en la sección VII.</p>
+  </div>
+
+  <!-- IX -->
+  <div class="section" id="s9">
+    <div class="section-title"><span class="section-num">IX</span> Cookies y tecnologías de seguimiento</div>
+    <p>La aplicación móvil CogniFit Escolar (Flutter) <strong>no utiliza cookies</strong>. El backend genera tokens JWT que se almacenan en la memoria del dispositivo durante la sesión activa y en el almacenamiento seguro del dispositivo para el token de refresco. Estos tokens no tienen finalidad publicitaria ni de rastreo de comportamiento fuera de la plataforma.</p>
+  </div>
+
+  <!-- X -->
+  <div class="section" id="s10">
+    <div class="section-title"><span class="section-num">X</span> Cambios al aviso de privacidad</div>
+    <p>El Responsable se reserva el derecho de modificar el presente Aviso de Privacidad para adaptarlo a novedades legislativas, jurisprudenciales o de práctica. Los cambios serán notificados a través de la propia aplicación y/o al correo electrónico registrado por el usuario con al menos <strong>10 días naturales</strong> de anticipación. El uso continuado de la plataforma tras la notificación constituirá aceptación de las modificaciones.</p>
+  </div>
+
+  <!-- XI -->
+  <div class="section" id="s11">
+    <div class="section-title"><span class="section-num">XI</span> Autoridad supervisora</div>
+    <p>Si considera que su derecho a la protección de datos ha sido lesionado, puede acudir al <strong>Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI)</strong>:</p>
+    <ul class="items">
+      <li>Sitio web: <a href="https://www.inai.org.mx" target="_blank" rel="noopener" style="color:var(--teal)">www.inai.org.mx</a></li>
+      <li>Teléfono: 800 835 4324</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-name">CogniFit Escolar</div>
+  <div class="footer-sub">Universidad Politécnica de Chiapas · Suchiapa, Chiapas, México</div>
+  <div class="footer-disc">Este sistema produce estimaciones de riesgo como apoyo docente. No sustituye diagnóstico clínico profesional.</div>
+  <a class="footer-back" href="index.html">← Volver al inicio</a>
+</footer>
+
+</body>
+</html>
